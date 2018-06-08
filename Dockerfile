@@ -9,6 +9,7 @@ RUN \
     openssh-client \
     curl \
     build-essential \
+    python3 \
     python3-pip \
     python3-setuptools \
     python3-wheel \
@@ -20,6 +21,7 @@ RUN \
     libffi-dev \
     shared-mime-info \
     python3-dev \
+    && apt-get upgrade \
     && apt-get clean
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
