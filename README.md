@@ -13,11 +13,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 722c/circle-ci-ubuntu-python3
+      - image: 722c/circle-ci-ubuntu-python-3
         environment:
           - DATABASE_URL=postgres://django:django@db/django
       - image: postgres
-        name: db  # Map to the name of the container in docker-compose.yml
+        name: db # Map to the name of the container in docker-compose.yml
         environment:
           - POSTGRES_USER=django
           - POSTGRES_PASSWORD=django
