@@ -33,7 +33,7 @@ RUN apt-get install -y --reinstall software-properties-common
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
 RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add -
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -yqq postgis postgresql-10-postgis-scripts
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yqq postgis postgresql-11-postgis-scripts
 
 # Install GEOS library
 RUN apt-get install -yqq binutils libproj-dev gdal-bin
