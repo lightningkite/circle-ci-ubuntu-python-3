@@ -22,6 +22,7 @@ RUN \
     libffi-dev \
     shared-mime-info \
     python3-dev \
+    libpq-dev \
     && apt-get upgrade -y \
     && apt-get clean
 
