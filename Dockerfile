@@ -26,7 +26,7 @@ RUN \
     && apt-get upgrade -y \
     && apt-get clean
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 RUN \
     apt-get -y update && \
