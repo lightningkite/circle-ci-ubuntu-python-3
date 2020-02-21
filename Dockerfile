@@ -43,7 +43,7 @@ RUN wget http://download.osgeo.org/geos/geos-3.8.0.tar.bz2
 RUN tar xjf geos-3.8.0.tar.bz2; cd geos-3.8.0; ./configure; make; make install
 ENV LD_LIBRARY_PATH /usr/local/lib
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 RUN \
     apt-get -y update && \
