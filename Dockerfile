@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 ENV PYTHONUNBUFFERED 1
 
 RUN \
@@ -26,7 +26,7 @@ RUN \
     && apt-get upgrade -y \
     && apt-get clean
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 RUN \
     apt-get -y update && \
