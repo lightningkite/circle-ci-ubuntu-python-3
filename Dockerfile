@@ -3,7 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN \
     apt-get -y update && \
-    apt-get install -y \
+    DEBIAN_FRONTEND="noninteractive" apt-get install -y \
     gettext \
     wget \
     git \
@@ -23,7 +23,7 @@ RUN \
     shared-mime-info \
     python3-dev \
     libpq-dev \
-    && apt-get upgrade -y \
+    && DEBIAN_FRONTEND="noninteractive" apt-get upgrade -y \
     && apt-get clean
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
